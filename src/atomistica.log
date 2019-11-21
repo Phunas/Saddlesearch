@@ -1,0 +1,304 @@
+Welcome to - Atomistica -
+
+   Atomistica revision:  0.8.0+5.gc19ba6f
+   Atomistica rev date:  2019-09-04T10:02:56+0200
+   Atomistica URL:       https://github.com/Atomistica/atomistica.git
+
+   architecture:         x86_64
+
+   build host:           Gautams-iMac.ddns.warwick.ac.uk
+   build date:           Oct  3 2019 14:43:09
+   compiler version:     numpy-distutils
+   compile options:      
+
+   run date:             Nov 21 2019 14:14:7
+
+- tersoff -
+     el(1)  = C
+     el(2)  = Si
+     A      =   0.13935999999999999E+04  0.15973111406360376E+04  0.18308000000000000E+04
+     B      =   0.34674000000000001E+03  0.40419915041969102E+03  0.47118000000000001E+03
+     xi     =   0.10000000000000000E+01  0.97760000000000002E+00  0.10000000000000000E+01
+     lambda =   0.34878999999999998E+01  0.29839000000000002E+01  0.24799000000000002E+01
+     mu     =   0.22119000000000000E+01  0.19720499999999999E+01  0.17322000000000000E+01
+     omega  =   0.10000000000000000E+01  0.10000000000000000E+01  0.10000000000000000E+01
+     mubo   =   0.00000000000000000E+00  0.00000000000000000E+00  0.00000000000000000E+00
+     m      = 1 1 1
+     beta   =   0.15724000000000000E-06  0.11000000000000001E-05
+     n      =   0.72750999999999999E+00  0.78734000000000004E+00
+     c      =   0.38049000000000000E+05  0.10039000000000000E+06
+     d      =   0.43483999999999998E+01  0.16216999999999999E+02
+     h      =  -0.57057999999999998E+00 -0.59824999999999995E+00
+     r1     =   0.18000000000000000E+01  0.22045407685048604E+01  0.27000000000000002E+01
+     r2     =   0.21000000000000001E+01  0.25099800796022267E+01  0.30000000000000000E+01
+
+ - particles_update_elements -
+     1 elements found.
+     1 = H  (   999 atoms found)
+
+ - particles_update_elements -
+     1 elements found.
+     1 = C  (   999 atoms found)
+
+- neighbors_request_interaction_range -
+     old interaction range  = .00000000000000000
+     request                = 2.10000000000000009
+
+- neighbors_update -
+     Initializing neighbor list.
+     interaction_range  =         2.1000000000
+     verlet_shell       =         0.0000000000
+     cutoff             =         2.1000000000
+     avgn               =        100
+     Memory estimate: 3.06396484375000000 MB
+
+- neighbors_binning_init -
+     Binning enabled.
+     cutoff     =      2.100
+     box_size   = (     17.850    17.850    17.850 )
+     n_cells    = (          8         8         8 )
+     cell_size  = (      2.231     0.000     0.000     0.000     2.231     0.000     0.000     0.000     2.231 )
+
+- tersoff -
+     (Re)allocating internal neighbor list buffers.
+     nebavg   = 4
+     nebmax   = 4
+     nebsize  = 3997
+     Memory estimate: .30494689941406250  MB
+
+- tersoff -
+     el(1)  = C
+     el(2)  = Si
+     A      =   0.13935999999999999E+04  0.15973111406360376E+04  0.18308000000000000E+04
+     B      =   0.34674000000000001E+03  0.40419915041969102E+03  0.47118000000000001E+03
+     xi     =   0.10000000000000000E+01  0.97760000000000002E+00  0.10000000000000000E+01
+     lambda =   0.34878999999999998E+01  0.29839000000000002E+01  0.24799000000000002E+01
+     mu     =   0.22119000000000000E+01  0.19720499999999999E+01  0.17322000000000000E+01
+     omega  =   0.10000000000000000E+01  0.10000000000000000E+01  0.10000000000000000E+01
+     mubo   =   0.00000000000000000E+00  0.00000000000000000E+00  0.00000000000000000E+00
+     m      = 1 1 1
+     beta   =   0.15724000000000000E-06  0.11000000000000001E-05
+     n      =   0.72750999999999999E+00  0.78734000000000004E+00
+     c      =   0.38049000000000000E+05  0.10039000000000000E+06
+     d      =   0.43483999999999998E+01  0.16216999999999999E+02
+     h      =  -0.57057999999999998E+00 -0.59824999999999995E+00
+     r1     =   0.18000000000000000E+01  0.22045407685048604E+01  0.27000000000000002E+01
+     r2     =   0.21000000000000001E+01  0.25099800796022267E+01  0.30000000000000000E+01
+
+ - particles_update_elements -
+     1 elements found.
+     1 = H  (   999 atoms found)
+
+ - particles_update_elements -
+     1 elements found.
+     1 = C  (   999 atoms found)
+
+- neighbors_request_interaction_range -
+     old interaction range  = .00000000000000000
+     request                = 2.10000000000000009
+
+- neighbors_update -
+     Initializing neighbor list.
+     interaction_range  =         2.1000000000
+     verlet_shell       =         0.0000000000
+     cutoff             =         2.1000000000
+     avgn               =        100
+     Memory estimate: 3.06396484375000000 MB
+
+- neighbors_binning_init -
+     Binning enabled.
+     cutoff     =      2.100
+     box_size   = (     17.850    17.850    17.850 )
+     n_cells    = (          8         8         8 )
+     cell_size  = (      2.231     0.000     0.000     0.000     2.231     0.000     0.000     0.000     2.231 )
+
+- tersoff -
+     (Re)allocating internal neighbor list buffers.
+     nebavg   = 4
+     nebmax   = 4
+     nebsize  = 3997
+     Memory estimate: .30494689941406250  MB
+
+- neighbors_del -
+     Average number of neighbors per atom = 3.99599599599599653
+
+- tersoff -
+     el(1)  = C
+     el(2)  = Si
+     A      =   0.13935999999999999E+04  0.15973111406360376E+04  0.18308000000000000E+04
+     B      =   0.34674000000000001E+03  0.40419915041969102E+03  0.47118000000000001E+03
+     xi     =   0.10000000000000000E+01  0.97760000000000002E+00  0.10000000000000000E+01
+     lambda =   0.34878999999999998E+01  0.29839000000000002E+01  0.24799000000000002E+01
+     mu     =   0.22119000000000000E+01  0.19720499999999999E+01  0.17322000000000000E+01
+     omega  =   0.10000000000000000E+01  0.10000000000000000E+01  0.10000000000000000E+01
+     mubo   =   0.00000000000000000E+00  0.00000000000000000E+00  0.00000000000000000E+00
+     m      = 1 1 1
+     beta   =   0.15724000000000000E-06  0.11000000000000001E-05
+     n      =   0.72750999999999999E+00  0.78734000000000004E+00
+     c      =   0.38049000000000000E+05  0.10039000000000000E+06
+     d      =   0.43483999999999998E+01  0.16216999999999999E+02
+     h      =  -0.57057999999999998E+00 -0.59824999999999995E+00
+     r1     =   0.18000000000000000E+01  0.22045407685048604E+01  0.27000000000000002E+01
+     r2     =   0.21000000000000001E+01  0.25099800796022267E+01  0.30000000000000000E+01
+
+ - particles_update_elements -
+     1 elements found.
+     1 = H  (   999 atoms found)
+
+ - particles_update_elements -
+     1 elements found.
+     1 = C  (   999 atoms found)
+
+- neighbors_request_interaction_range -
+     old interaction range  = .00000000000000000
+     request                = 2.10000000000000009
+
+- neighbors_update -
+     Initializing neighbor list.
+     interaction_range  =         2.1000000000
+     verlet_shell       =         0.0000000000
+     cutoff             =         2.1000000000
+     avgn               =        100
+     Memory estimate: 3.06396484375000000 MB
+
+- neighbors_binning_init -
+     Binning enabled.
+     cutoff     =      2.100
+     box_size   = (     17.850    17.850    17.850 )
+     n_cells    = (          8         8         8 )
+     cell_size  = (      2.231     0.000     0.000     0.000     2.231     0.000     0.000     0.000     2.231 )
+
+- tersoff -
+     (Re)allocating internal neighbor list buffers.
+     nebavg   = 4
+     nebmax   = 4
+     nebsize  = 3997
+     Memory estimate: .30494689941406250  MB
+
+- neighbors_del -
+     Average number of neighbors per atom = 3.99599599599599697
+
+- tersoff -
+     el(1)  = C
+     el(2)  = Si
+     A      =   0.13935999999999999E+04  0.15973111406360376E+04  0.18308000000000000E+04
+     B      =   0.34674000000000001E+03  0.40419915041969102E+03  0.47118000000000001E+03
+     xi     =   0.10000000000000000E+01  0.97760000000000002E+00  0.10000000000000000E+01
+     lambda =   0.34878999999999998E+01  0.29839000000000002E+01  0.24799000000000002E+01
+     mu     =   0.22119000000000000E+01  0.19720499999999999E+01  0.17322000000000000E+01
+     omega  =   0.10000000000000000E+01  0.10000000000000000E+01  0.10000000000000000E+01
+     mubo   =   0.00000000000000000E+00  0.00000000000000000E+00  0.00000000000000000E+00
+     m      = 1 1 1
+     beta   =   0.15724000000000000E-06  0.11000000000000001E-05
+     n      =   0.72750999999999999E+00  0.78734000000000004E+00
+     c      =   0.38049000000000000E+05  0.10039000000000000E+06
+     d      =   0.43483999999999998E+01  0.16216999999999999E+02
+     h      =  -0.57057999999999998E+00 -0.59824999999999995E+00
+     r1     =   0.18000000000000000E+01  0.22045407685048604E+01  0.27000000000000002E+01
+     r2     =   0.21000000000000001E+01  0.25099800796022267E+01  0.30000000000000000E+01
+
+ - particles_update_elements -
+     1 elements found.
+     1 = H  (   999 atoms found)
+
+ - particles_update_elements -
+     1 elements found.
+     1 = C  (   999 atoms found)
+
+- neighbors_request_interaction_range -
+     old interaction range  = .00000000000000000
+     request                = 2.10000000000000009
+
+- neighbors_update -
+     Initializing neighbor list.
+     interaction_range  =         2.1000000000
+     verlet_shell       =         0.0000000000
+     cutoff             =         2.1000000000
+     avgn               =        100
+     Memory estimate: 3.06396484375000000 MB
+
+- neighbors_binning_init -
+     Binning enabled.
+     cutoff     =      2.100
+     box_size   = (     17.850    17.850    17.850 )
+     n_cells    = (          8         8         8 )
+     cell_size  = (      2.231     0.000     0.000     0.000     2.231     0.000     0.000     0.000     2.231 )
+
+- tersoff -
+     (Re)allocating internal neighbor list buffers.
+     nebavg   = 4
+     nebmax   = 4
+     nebsize  = 3997
+     Memory estimate: .30494689941406250  MB
+
+- neighbors_del -
+     Average number of neighbors per atom = 3.99599599599599653
+
+- tersoff -
+     el(1)  = C
+     el(2)  = Si
+     A      =   0.13935999999999999E+04  0.15973111406360376E+04  0.18308000000000000E+04
+     B      =   0.34674000000000001E+03  0.40419915041969102E+03  0.47118000000000001E+03
+     xi     =   0.10000000000000000E+01  0.97760000000000002E+00  0.10000000000000000E+01
+     lambda =   0.34878999999999998E+01  0.29839000000000002E+01  0.24799000000000002E+01
+     mu     =   0.22119000000000000E+01  0.19720499999999999E+01  0.17322000000000000E+01
+     omega  =   0.10000000000000000E+01  0.10000000000000000E+01  0.10000000000000000E+01
+     mubo   =   0.00000000000000000E+00  0.00000000000000000E+00  0.00000000000000000E+00
+     m      = 1 1 1
+     beta   =   0.15724000000000000E-06  0.11000000000000001E-05
+     n      =   0.72750999999999999E+00  0.78734000000000004E+00
+     c      =   0.38049000000000000E+05  0.10039000000000000E+06
+     d      =   0.43483999999999998E+01  0.16216999999999999E+02
+     h      =  -0.57057999999999998E+00 -0.59824999999999995E+00
+     r1     =   0.18000000000000000E+01  0.22045407685048604E+01  0.27000000000000002E+01
+     r2     =   0.21000000000000001E+01  0.25099800796022267E+01  0.30000000000000000E+01
+
+- neighbors_del -
+     Average number of neighbors per atom = 3.99599599599599653
+
+ - particles_update_elements -
+     1 elements found.
+     1 = H  (   999 atoms found)
+
+ - particles_update_elements -
+     1 elements found.
+     1 = C  (   999 atoms found)
+
+- neighbors_request_interaction_range -
+     old interaction range  = .00000000000000000
+     request                = 2.10000000000000009
+
+- neighbors_update -
+     Initializing neighbor list.
+     interaction_range  =         2.1000000000
+     verlet_shell       =         0.0000000000
+     cutoff             =         2.1000000000
+     avgn               =        100
+     Memory estimate: 3.06396484375000000 MB
+
+- neighbors_binning_init -
+     Binning enabled.
+     cutoff     =      2.100
+     box_size   = (     17.850    17.850    17.850 )
+     n_cells    = (          8         8         8 )
+     cell_size  = (      2.231     0.000     0.000     0.000     2.231     0.000     0.000     0.000     2.231 )
+
+- tersoff -
+     (Re)allocating internal neighbor list buffers.
+     nebavg   = 4
+     nebmax   = 4
+     nebsize  = 3997
+     Memory estimate: .30494689941406250  MB
+
+
+   simulation started:  Nov 21 2019 14:14:7
+   simulation ended:    Nov 21 2019 14:14:12
+
+====> TIMINGS <====
+                                                                   time[s]     calls
+                                                                   -------     -----
+ MDCORE                                                              5.605         1
+   - tersoff_force                                                   1.988       860
+       - fill_neighbor_list                                          0.266       214
+       - ** remainder **                                             1.722
+   - ** remainder **                                                 3.617

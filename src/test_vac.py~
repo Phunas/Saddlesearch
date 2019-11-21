@@ -1,0 +1,15 @@
+from ase.optimize import FIRE, LBFGS, LBFSGLineSearch
+from ase.build import bulk
+from atomistica import Tersoff
+from ode import ODE12rOptimizer
+
+a0 = bulk('C') * 3
+a0.rattle(0.05)
+del a0[0]
+
+
+for OPT in [ODE12rOptimizer, FIRE, LBFGS, LBFGSLineSearch]:
+    a = a0.copy()
+    a.set_calculator(Tersoff())
+    opt = OPT(a)
+    opt.run(fmax=1e-4)

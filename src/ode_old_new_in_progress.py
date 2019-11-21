@@ -66,9 +66,9 @@ def odesolve_r12(f, X0, log, P, h=0.2, g = lambda P, X: X, precon_prep= lambda P
             conditions = (Rnew <= Rn * (1 - C1 * h), Rnew <= Rn * C2, err <= rtol ) # THIS ALSO SEEMS POTENTIALLY WRONG
 
         y = Fn - Fnew
-        if Extrapolate == 1:       # F(xn + h Fn) ⋅ Fn ~ 0
+        if Extrapolate == 1:       # F(xn + h Fn)
             h_ls = h*np.dot(Fn, y)/(np.dot(y,y))
-        elif Extrapolate == 2:   # F(Xn + h Fn) ⋅ F{n+1} ~ 0
+        elif Extrapolate == 2:   # F(Xn + h Fn)
             h_ls = h * np.dot(Fn, Fnew) / (np.dot(Fn, y) + 1e-10)
         elif Extrapolate == 3:   # min | F(Xn + h Fn) |
             h_ls = h * np.dot(Fn, y) / (np.dot(y, y) + 1e-10)
