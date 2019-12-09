@@ -1,49 +1,24 @@
 import numpy as np
 
 
-import PathLog #FIXME this needs to come from somewhere
-
-
-# FIXME: There is a definite weirdness in the definition of the run functions
-def run_case_1(method, E, dE, x0, k,interp, tol, maxnit, precon_scheme, path_traverse,
+def run_case_1(method, x0, k,interp, tol, maxnit, precon_scheme, path_traverse,
         fixed_ends, verbose=method, precon, precon_prep = precon_scheme, direction = path_traverse):
 
-    # initialize variables
-    #FIXME: the julia code says x = x0.x, but I have no idea what the equivalent of . is in python
+    #HOW DO WE INITIALIZE VARIABLES JULIA LINE 7
 
-    nit = 0
-    numdE = 0
-    numE = 0
-
-    log = PathLog()
-    if verbose >= 2:
-        pass #FIXME put something here
-
-    file = []
-    if verbose >= 4:
-        pass #FIXME put something here
-
-    xout, log, alpha = odesolve(solver(method), ) #FIXME I DON'T KNOW HOW TO DO THIS
+    xout, alpha = odesolve(solver(method), lambda X: forces(typex0,X,direction(NI, nit), k, interp, fixed_ends)), tol = tol, maxtol = maxtol, maxnit = maxnit, method = "$(typeof(method))")
 
 
 
 ### STARTING BACK AT LINE 80 FOR THE CONTINUATION, WILL COME BACK TO IT
 
-def FORCES(precon, path_type, X, dE, precon_scheme,
+def FORCES(path_type, X, dE, 
            direcion, k, interp, fixed_ends)
 
-    x = convert(path_type, X)
-    dxds = deepcopy(x)
-
-    # Proconditioner
-    Np = size(precon, 1)
-    N = length(x)
-    P_1 = lambda i: precon[np.mod(i-1, Np) +1, 1]
-    P_2 = lambda i,j: precon{np.mod(i-1,Np) +1, mod(j-1,Np)+1]
 
     if interp == 1:
         # central finite differences
-        dxds = 
+        dxds = [[np.zeros(x[1])], [0.5*(x[i+1]-x[i-1]) for i=2:N-1], [np.zeros(x[1])]]
 
     elif interp > 1:
         # splines
