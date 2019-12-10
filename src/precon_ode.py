@@ -94,7 +94,7 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
                 callback(X)
             
             X_out.append(X) #Store X
-            log.append(nit, log, Rn) 
+            log.append([nit, log, Rn]) 
 
             #We check the residuals again
             if converged is not None:
