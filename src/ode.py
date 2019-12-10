@@ -83,21 +83,21 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
             if callback is not None:
                 callback(X)
             
-            X_out = np.append(X_out, X) #Store X
-            log = np.append(log, Rn) 
+            X_out.append(X) #Store X
+            log.append([nit, log, Rn]) 
 
             #We check the residuals again
             if Rn <= fmax:
                 if verbose >= 1:
                     print(f"SADDLESEARCH: terminates succesfully after {nit} iterations.")
-                X_out = np.append(X_out, X)
-                log = np.append(log, Rn) 
+                X_out.append(X)
+                log.append([nit, log, Rn]) 
                 return X_out, log, h
             if Rn >= maxtol:
                 print(f"SADLESEARCH: Residual {Rn} is too large at itteration number {nit}")
         
-                X_out = np.append(X_out, X) #Store X
-                log = np.append(log, Rn) 
+                X_out.append(X) #Store X
+                log.append([nit, log, Rn]) 
                 return X_out, log, h
 
             # Compute a new step size. This is based on the extrapolation and some other heuristics
