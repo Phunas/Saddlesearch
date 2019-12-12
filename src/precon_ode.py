@@ -19,7 +19,6 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
                  C1 = 1e-2, C2=2.0, hmin=1e-10, extrapolate=3, callback=None, precon=None, converged=None):
 
     X = X0
-    X_out = [] #Create an array to store the values of X
     
     Fn = f(X) #Get the Forces
     if precon:
@@ -27,17 +26,14 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
     else:
         Rn = np.linalg.norm(Fn, np.inf)
 
-    X_out.append(X) #appending current values of X
-    log = []
-    log.append([0, X, Rn]) #appending current residual
     
     if Rn <= fmax:
         print(f"ODE12r terminates succesfully after 0 iterations with residual {Rn}")#Forces are already small
-        return X_out, log, h
+        return h
 
     if Rn >= maxtol:
         print(f"ODE12r: Residual {Rn} is too large at itteration 0") #Forces are too big
-        return X_out, log, h
+        return h
 
     # computation of the initial step
     r = np.linalg.norm(Fn, np.inf) #pick the biggest force
@@ -93,8 +89,6 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
             if callback is not None:
                 callback(X)
             
-            X_out.append(X) #Store X
-            log.append([nit, log, Rn]) 
 
             #We check the residuals again
             if converged is not None:
@@ -104,15 +98,11 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
             if conv:
                 if verbose >= 1:
                     print(f"ODE12r: terminates succesfully after {nit} iterations with residual {Rn} with h equal {h}.")
-                X_out = np.append(X_out, X)
-                log = np.append(log, Rn) 
-                return X_out, log, h
+                return h
             if Rn >= maxtol:
                 print(f"ODE12r: Residual {Rn} is too large at iteration number {nit}")
         
-                X_out.append(X) #Store X
-                log.append(nit, log, Rn) 
-                return X_out, log, h
+                return h
 
             # Compute a new step size. This is based on the extrapolation and some other heuristics
             h = max(0.25 * h, min(4*h, h_err, h_ls))
@@ -124,14 +114,14 @@ def odesolve_r12(f, X0, h=None, verbose=1, fmax=1e-6, maxtol=1e3,
         # error message if step size is too small
         if abs(h) <= hmin:
             print(f'ODE12r Step size {h} too small at nit = {nit}')
-            return X_out, log, h
+            return h
 
 
     #Logging:
     if verbose >= 1:
         print(f'ODE12r terminates unuccesfully after {steps} iterations.')
 
-    return X_out, log, h
+    return h
 
 
 #def exp_precon_matrix(X, P)
@@ -195,7 +185,7 @@ class ODE12rOptimizer_precon(SciPyOptimizer):
         precon = None
         if self.precon is not None:
             precon = self.apply_precon
-        X_out, log, h = odesolve_r12(lambda x: -self.fprime(x),
+        h = odesolve_r12(lambda x: -self.fprime(x),
                                      self.x0(),
                                      fmax=fmax,
                                      steps=steps,
